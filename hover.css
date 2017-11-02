@@ -1,0 +1,204 @@
+/* begin-大小变化 */
+.hover-big,.hover-small {
+	transition: all 0.4s;
+}
+
+.hover-big:hover {
+	transform: scale(1.2);
+}
+
+.hover-small:hover {
+	transform: scale(0.9);
+}
+/* end-大小变化 */
+
+/* begin-形状变化*/
+.hover-skew-l,.hover-skew-r,.hover-skew-l-t,.hover-skew-l-b,.hover-skew-r-t,.hover-skew-r-b {
+	transition: all 0.4s;
+}
+
+.hover-skew-l-t,.hover-skew-r-t {
+	transform-origin: 0 100%;
+}
+
+.hover-skew-l-b,.hover-skew-r-b {
+	transform-origin: 100% 0;
+}
+
+.hover-skew-l:hover {
+	transform: skew(-15deg);
+}
+
+.hover-skew-r:hover {
+	transform: skew(15deg);
+}
+
+.hover-skew-l-t:hover {
+	transform: skew(-15deg);
+}
+
+.hover-skew-l-b:hover {
+	transform: skew(15deg);
+}
+
+.hover-skew-r-t:hover {
+	transform: skew(15deg);
+}
+
+.hover-skew-r-b:hover {
+	transform: skew(-15deg);
+}
+/* end-形状变化*/
+
+/* begin-旋转变化 */
+.hover-rotate-l,.hover-rotate-r,.hover-rotate5,.hover-rotate15,.hover-rotate30,.hover-rotate60,.hover-rotate90,.hover-rotate180,.hover-rotate360,.hover-rotate-5,.hover-rotate-15,.hover-rotate-30,.hover-rotate-60,.hover-rotate-90,.hover-rotate-180 {
+	transition: all 0.4s;
+}
+
+.hover-rotate-l:hover {
+	transform: scale(1.1) rotate(5deg); 
+}
+
+.hover-rotate-r:hover {
+	transform: scale(1.1) rotate(-5deg);
+}
+
+.hover-rotate5:hover {
+	transform: rotate(5deg);
+}
+
+.hover-rotate15:hover {
+	transform: rotate(15deg);
+}
+
+.hover-rotate30:hover {
+	transform: rotate(30deg);
+}
+
+.hover-rotate60:hover {
+	transform: rotate(60deg);
+}
+
+.hover-rotate90:hover {
+	transform: rotate(90deg);
+}
+
+.hover-rotate180:hover {
+	transform: rotate(180deg);
+}
+
+.hover-rotate360:hover {
+	transform: rotate(360deg);
+}
+
+.hover-rotate-5:hover {
+	transform: rotate(-5deg);
+}
+
+.hover-rotate-15:hover {
+	transform: rotate(-15deg);
+}
+
+.hover-rotate-30:hover {
+	transform: rotate(-30deg);
+}
+
+.hover-rotate-60:hover {
+	transform: rotate(-60deg);
+}
+
+.hover-rotate-90:hover {
+	transform: rotate(-90deg);
+}
+
+.hover-rotate-180:hover {
+transform: rotate(-180deg);
+}
+/* end-旋转变化*/
+
+/* begin-位置变化 */
+.hover-l,.hover-r,.hover-t,.hover-b {
+	transition: all 0.4s;
+}
+
+.hover-l:hover {
+	transform: translate3d(-10px, 0, 0);
+}
+
+.hover-r:hover {
+	transform: translate3d(10px, 0, 0);
+}
+
+.hover-t:hover {
+	transform: translate3d(0, -10px, 0);
+}
+
+.hover-b:hover {
+	transform: translate3d(0, 10px, 0);
+}
+/* end-位置变化 */
+
+/* begin-边框变化 */
+.hover-border,.hover-border-in {
+	transition: all 0.4s;
+}
+
+.hover-border:hover {
+	box-shadow: 0 0 0 4px #09f, 0 0 1px transparent;
+}
+
+.hover-border-in:hover {
+	box-shadow: inset 0 0 0 4px #09f, 0 0 1px transparent;
+}
+/* end-边框变化 */
+
+/* begin-阴影变化 */
+.hover-shadow,.hover-shadow-in {
+	transition: all 0.4s;
+}
+
+.hover-shadow:hover {
+	box-shadow: 0 0 10px #333;
+}
+
+.hover-shadow-in:hover {
+	box-shadow: inset 0 0 10px #333;
+}
+/* end-阴影变化*/
+
+/* begin-透明变化 */
+.hover-fade-out,.hover-fade-in {
+	transition: all 0.4s;
+}
+
+.hover-fade-out:hover {
+	opacity: 0.5;
+}
+
+.hover-fade-in {
+	opacity: 0.5;
+}
+
+.hover-fade-in:hover {
+	opacity: 1;
+}
+/* end-透明变化 */
+
+/* begin-圆角变化 */
+.hover-rectangle,.hover-radius {
+	transition: all 0.4s;
+}
+
+.hover-rectangle:hover {
+	border-radius: 10px;
+}
+
+.hover-radius {
+	border-radius: 10px;
+}
+
+.hover-radius:hover {
+	border-radius: 0;
+}
+/* end-圆角变化*/
+

@@ -1,0 +1,283 @@
+/* begin-颜色块的变化 */
+/*当前元素设置相对定位*/
+.hover-color-fade,.hover-color-fade-t,.hover-color-fade-l,.hover-color-fade-r,.hover-color-fade-b,.hover-color-bounce-t,.hover-color-bounce-l,.hover-color-bounce-r,.hover-color-bounce-b,.hover-color-fade-c-out,.hover-color-fade-c-in,.hover-color-fade-m-out,.hover-color-fade-m-in {
+	transition: all 0.4s;
+	position: relative;
+	z-index: 1;
+}
+
+/*当前元素fade的before和after设置绝对定位*/
+.hover-color-fade::before,.hover-color-fade-t::before,.hover-color-fade-l::before,.hover-color-fade-r::before,.hover-color-fade-b::before,.hover-color-fade-m-in::before,.hover-color-fade-m-in::after,.hover-color-fade-m-out::before,.hover-color-fade-c-in::after,.hover-color-fade-c-in::before,.hover-color-fade-c-out::before {
+	position: absolute;
+	transition: all 0.4s;
+	content: "";
+	display: block;
+	background: #09f;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+
+/*弹跳元素bounce的before和after设置绝对定位和运动曲线*/
+.hover-color-bounce-b::before,.hover-color-bounce-l::before,.hover-color-bounce-r::before,.hover-color-bounce-t::before {
+	transition: all 0.4s;
+	position: absolute;
+	content: "";
+	display: block;
+	background: #09f;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	transition-timing-function: cubic-bezier(0.52, 1.7, 0.5, 0.4);
+}
+
+/*所有hover后的字体颜色变化*/
+.hover-color-fade:hover,.hover-color-fade-t:hover,.hover-color-fade-l:hover,.hover-color-fade-r:hover,.hover-color-fade-b:hover,.hover-color-bounce-l:hover,.hover-color-bounce-r:hover,.hover-color-bounce-t:hover,.hover-color-bounce-b:hover,.hover-color-fade-c-in:hover,.hover-color-fade-c-out:hover,.hover-color-fade-m-in:hover,.hover-color-fade-m-out:hover {
+	color: #fff;
+}
+
+/*fade变化曲线*/
+.hover-color-fade::before {
+	top: 0;
+	left: 0;
+	transform: scaleX(1);
+	opacity: 0;
+}
+
+.hover-color-fade:hover::before{
+	opacity: 1;
+}
+
+/*fade-t和bounce-t从上往下的变化*/
+.hover-color-fade-t::before,.hover-color-bounce-t::before {
+	top: 0;
+	left: 0;
+	transform-origin: 50% 0;
+	transform: scaleY(0);
+}
+
+.hover-color-fade-t:hover::before,.hover-color-bounce-t:hover::before {
+	transform: scaleY(1);
+}
+
+/*fade-l和bounce-l的从左往右的变化*/
+.hover-color-fade-l::before,.hover-color-bounce-l::before {
+	top: 0;
+	left: 0;
+	transform-origin: 0 50%;
+	transform: scaleX(0);
+}
+
+.hover-color-fade-l:hover::before,.hover-color-bounce-l:hover::before {
+	transform: scaleX(1);
+}
+
+/*fade-r和bounce-r的从右向左的变化*/
+.hover-color-fade-r::before,.hover-color-bounce-r::before {
+	top: 0;
+	left: 0;
+	transform-origin: 100% 50%;
+	transform: scaleX(0);
+}
+
+.hover-color-fade-r:hover::before,.hover-color-bounce-r:hover::before {
+	transform: scaleX(1);
+}
+
+/*fade-b和bounce-b的从下往上的变化*/
+.hover-color-fade-b::before,.hover-color-bounce-b::before {
+    top: 0;
+    left: 0;
+    transform-origin: 50% 100%;
+    transform: scaleY(0);
+}
+
+.hover-color-fade-b:hover::before,.hover-color-bounce-b:hover::before {
+    transform: scaleY(1);
+}
+
+/*fade-m-in垂直居中进来*/
+.hover-color-fade-m-in::before {
+	top: 0;
+	left: 0;
+	transform-origin: 50% 0;
+	transform: scaleY(0);
+}
+
+.hover-color-fade-m-in::after {
+	bottom: 0;
+	left: 0;
+	transform-origin: 50% 100%;
+	transform: scaleY(0);
+}
+
+.hover-color-fade-m-in:hover::before,.hover-color-fade-m-in:hover::after {
+	transform: scaleY(1);
+}
+
+/*fade-m-out垂直从中间出去*/
+.hover-color-fade-m-out::before {
+	top: 0;
+	left: 0;
+	transform-origin: 50% 50%;
+	transform: scaleY(0);
+}
+
+.hover-color-fade-m-out:hover::before,.hover-color-fade-m-out:hover::after {
+	transform: scaleY(1);
+}
+
+/*fade-c-in水平从两边进入*/
+.hover-color-fade-c-in::before {
+	top: 0;
+	left:0;
+	transform-origin: 0 50%;
+	transform: scaleX(0);
+}
+
+.hover-color-fade-c-in::after {
+	bottom: 0;
+	right:0;
+	transform-origin: 100% 50%;
+	transform: scaleX(0);
+}
+
+.hover-color-fade-c-in:hover::before,.hover-color-fade-c-in:hover::after {
+	transform: scaleX(1);
+}
+
+/*fade-c-out水平从中往出去*/
+.hover-color-fade-c-out::before {
+	top: 0;
+	left: 0;
+	transform-origin: 50% 50%;
+	transform: scaleX(0);
+}
+
+.hover-color-fade-c-out:hover::before {
+	transform: scaleX(1);
+}
+/* end-颜色块的变化 */
+
+
+/* begin-颜色上下划线的变化 */
+/*当前元素的相对定位*/
+.hover-color-overline-l,.hover-color-overline-r,.hover-color-underline-l,.hover-color-underline-r,.hover-color-overline-c,.hover-color-overline-c-out,.hover-color-underline-c,.hover-color-underline-c-out {
+	position: relative;
+	transition: all 0.4s;
+	z-index: 1;
+}
+
+/*当前元素fade的before和after设置绝对定位*/
+.hover-color-overline-l::before,.hover-color-overline-r::before,.hover-color-underline-l::before,.hover-color-underline-r::before,.hover-color-overline-c::before,.hover-color-overline-c::after,.hover-color-overline-c-out::before,.hover-color-underline-c::before,.hover-color-underline-c::after,.hover-color-underline-c-out::before {
+	position: absolute;
+	transition: all 0.4s;
+	content: "";
+	display: block;
+	background: #09f;
+	width: 100%;
+	height: 4px;
+	z-index: -1;
+	transform: scaleX(0);
+}
+
+/*上划线从左出来*/
+.hover-color-overline-l::before {
+	top: 0;
+	left: 0;
+	transform-origin: 0 0;
+}
+
+.hover-color-overline-l:hover::before {
+	transform: scaleX(1);
+}
+
+/*上划线从右出来*/
+.hover-color-overline-r::before {
+	top: 0;
+	right: 0;
+	transform-origin: 100% 0;
+}
+
+.hover-color-overline-r:hover::before {
+	transform: scaleX(1);
+}
+
+/*下划线从左出来*/
+.hover-color-underline-l::before {
+	bottom: 0;
+	left: 0;
+	transform-origin: 0 100%;
+}
+
+.hover-color-underline-l:hover::before {
+	transform: scaleX(1);
+}
+
+/*下划线从右出来*/
+.hover-color-underline-r::before {
+	bottom: 0;
+	right: 0;
+	transform-origin: 100% 100%;
+}
+
+.hover-color-underline-r:hover::before {
+	transform: scaleX(1);
+}
+
+/*上划线从两边进入*/
+.hover-color-overline-c::before {
+	top: 0;
+	left: 0;
+	transform-origin: 0 0;
+}
+
+.hover-color-overline-c::after {
+	top: 0;
+	right: 0;
+	transform-origin: 100% 0;
+}
+
+.hover-color-overline-c:hover::before,.hover-color-overline-c:hover::after {
+	transform: scaleX(1);
+}
+
+/*上划线从中出去*/
+.hover-color-overline-c-out::before {
+	top: 0;
+	left: 0;
+	transform-origin: 50% 50%;
+}
+
+.hover-color-overline-c-out:hover::before {
+	transform: scaleX(1);
+}
+
+/*下划线从两边进入*/
+.hover-color-underline-c::before {
+	bottom: 0;
+	left: 0;
+	transform-origin: 0 100%;
+}
+
+.hover-color-underline-c::after {
+	bottom: 0;
+	right: 0;
+	transform-origin: 100% 100%;
+}
+
+.hover-color-underline-c:hover::before,.hover-color-underline-c:hover::after {
+	transform: scaleX(1);
+}
+
+/*下划线从中出去*/
+.hover-color-underline-c-out::before {
+	bottom: 0;
+	left: 0;
+	transform-origin: 50% 50%;
+}
+
+.hover-color-underline-c-out:hover::before {
+	transform: scaleX(1);
+}
+/* end-颜色上下划线的变化 */
